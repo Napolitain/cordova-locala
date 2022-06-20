@@ -1,0 +1,17 @@
+path.harehounds {
+	stroke: #777;
+	stroke-width: 2px;
+	fill: #FFF;
+}
+path.harehounds.road {
+	fill: #777;
+}
+/*
+path.harehounds.pet {
+	stroke-width: 1px;
+}
+*/
+path.harehounds.toggle {
+	stroke: red;
+	stroke-width: 4px;
+}

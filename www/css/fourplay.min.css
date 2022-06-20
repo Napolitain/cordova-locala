@@ -1,0 +1,1 @@
+path.fourplay.box{animation:fbox 3s ease-in-out forwards;fill:#FFF;stroke:#777;stroke-dasharray:6263;stroke-dashoffset:6263}path.fourplay.box.completed{fill:#FFF;stroke:#777;stroke-dasharray:6263;stroke-dashoffset:0}@keyframes fbox{to{stroke-dashoffset:0}}path.fourplay.case{stroke:#777;transition:all .5s linear}

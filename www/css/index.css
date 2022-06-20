@@ -1,0 +1,38 @@
+* {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	transform-origin: 0% 0%;
+	-webkit-touch-callout: none; /* iOS Safari */
+  	  -webkit-user-select: none; /* Safari */
+   	   -khtml-user-select: none; /* Konqueror HTML */
+	     -moz-user-select: none; /* Firefox */
+	      -ms-user-select: none; /* Internet Explorer/Edge */
+	          user-select: none; /* Non-prefixed version, currently
+								supported by Chrome and Opera */
+}
+
+div.main {
+	transition: all 1s linear;
+	width: 100%;
+}
+
+button.list {
+	position: absolute;
+	left: 0;
+	width: 100%!important;
+	height: 60px;
+	color: #000;
+	border-bottom: 1px solid #000;
+	background-color: #FFF;
+}
+
+path.blank {
+	opacity: 0!important;
+}
+
+text.victory {
+	opacity: 0;
+	fill: #777;
+	font-size: 48px;
+	text-anchor: middle;
+}

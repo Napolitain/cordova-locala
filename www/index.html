@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	</head>
+
+	<body>
+		<link rel="stylesheet" href="css/index.min.css"/> <!-- head -->
+		<div class="main home" style="display: block; overflow-y: auto!important;">
+			<button class="list" onmousedown="swap_page('div.main.tictactoe'); Tictactoe.init();" style="top: 0px;">Tic tac toe</button>
+			<button class="list" onmousedown="swap_page('div.main.fourplay'); Fourplay.init();" style="top: 60px;">Fourplay</button>
+			<button class="list" onmousedown="swap_page('div.main.harehounds'); Harehounds.init();" style="top: 120px;">Hare and hounds</button>
+			<button class="list" onmousedown="swap_page('div.main.cadavre'); Cadavre.init();" style="top: 180px;">Cadavre Exquis</button>
+		</div>
+		<script src="js/index.min.js"></script>
+
+		<script src="js/_table.min.js"></script> <!-- libs -->
+		<script src="js/_svg.min.js"></script>
+
+		<link rel="stylesheet" href="css/tictactoe.min.css"/> <!-- tail -->
+		<div class="main tictactoe" style="display: none;">
+			<svg width="400" height="450" class="svg tictactoe"> <!-- viewBox="0 0 400 450" -->
+				<!-- map graphics -->
+				<g class="tictactoe table">
+					<path class="tictactoe a" d="m 50 150 l 100 0"/>
+					<path class="tictactoe b" d="m 150 150 l 100 0"/>
+					<path class="tictactoe c" d="m 250 150 l 100 0"/>
+
+					<path class="tictactoe b" d="m 50 250 l 100 0"/>
+					<path class="tictactoe c" d="m 150 250 l 100 0"/>
+					<path class="tictactoe d" d="m 250 250 l 100 0"/>
+
+					<path class="tictactoe b" d="m 150 350 l 0 -100"/>
+					<path class="tictactoe c" d="m 150 250 l 0 -100"/>
+					<path class="tictactoe d" d="m 150 150 l 0 -100"/>
+
+					<path class="tictactoe c" d="m 250 350 l 0 -100"/>
+					<path class="tictactoe d" d="m 250 250 l 0 -100"/>
+					<path class="tictactoe e" d="m 250 150 l 0 -100"/>
+				</g>
+				<text class="tictactoe victory" x="200" y="400"></text> <!-- text-anchor is set text to middle -->
+			</svg>
+		</div>
+		<script src="js/tictactoe.min.js"></script>
+
+		<link rel="stylesheet" href="css/fourplay.min.css"/>
+		<div class="main fourplay" style="display: none;">
+			<svg width="450" height="450" class="svg fourplay"> <!-- viewBox="0 0 450 450" -->
+				<g class="fourplay table">
+				</g>
+				<g class="fourplay cases">
+				</g>
+				<text class="fourplay victory" x="225" y="430"></text>
+			</svg>
+		</div>
+		<script src="js/fourplay.min.js"></script>
+
+		<link rel="stylesheet" href="css/harehounds.min.css"/>
+		<div class="main harehounds" style="display: none;">
+			<svg width="300" height="450" class="svg harehounds"> <!-- viewBox="0 0 450 300" -->
+				<g class="harehounds table">
+					<g class="harehounds roads">
+						<path class="harehounds road" d="m 150 50 l -75 75"/>
+						<path class="harehounds road" d="m 150 50 l 0 75"/>
+						<path class="harehounds road" d="m 150 50 l 75 75"/>
+						<path class="harehounds road" d="m 75 125 l 75 0"/>
+						<path class="harehounds road" d="m 75 125 l 75 75"/>
+						<path class="harehounds road" d="m 75 125 l 0 75"/>
+						<path class="harehounds road" d="m 150 125 l 75 0"/>
+						<path class="harehounds road" d="m 150 125 l 0 75"/>
+						<path class="harehounds road" d="m 225 125 l -75 75"/>
+						<path class="harehounds road" d="m 225 125 l 0 75"/>
+						<path class="harehounds road" d="m 75 200 l 75 0"/>
+						<path class="harehounds road" d="m 75 200 l 0 75"/>
+						<path class="harehounds road" d="m 150 200 l -75 75"/>
+						<path class="harehounds road" d="m 150 200 l 0 75"/>
+						<path class="harehounds road" d="m 150 200 l 75 75"/>
+						<path class="harehounds road" d="m 150 200 l 75 0"/>
+						<path class="harehounds road" d="m 225 200 l 0 75"/>
+						<path class="harehounds road" d="m 75 275 l 75 75"/>
+						<path class="harehounds road" d="m 75 275 l 75 0"/>
+						<path class="harehounds road" d="m 150 275 l 0 75"/>
+						<path class="harehounds road" d="m 150 275 l 75 0"/>
+						<path class="harehounds road" d="m 225 275 l -75 75"/>
+					</g>
+					<g class="harehounds cases">
+						<g>
+							<path class="harehounds case" d="m 130 50 a 20 20 0 0 1 40 0 a 20 20 0 0 1 -40 0" loc="[1, 2]" roads="[[2, 1], [2, 2], [2, 3]]"/>
+							<path class="harehounds pet dog" d="m 160 55 l 0 -5 a 10 10 0 0 0 -20 0 l 0 5"/> <!-- (rotated): m 155 40 l -5 0 a 10 10 0 0 0 0 20 l 5 0 -->
+						</g>
+						<g>
+							<path class="harehounds case" d="m 55 125 a 20 20 0 0 1 40 0 a 20 20 0 0 1 -40 0" loc="[2, 1]" roads="[[1, 2], [2, 2], [3, 1], [3, 2]]"/>
+							<path class="harehounds pet dog" d="m 85 130 l 0 -5 a 10 10 0 0 0 -20 0 l 0 5"/>
+						</g>
+						<g>
+							<path class="harehounds case" d="m 130 125 a 20 20 0 0 1 40 0 a 20 20 0 0 1 -40 0" loc="[2, 2]" roads="[[1, 2], [2, 1], [2, 3], [3, 2]]"/>
+						</g>
+						<g>
+							<path class="harehounds case" d="m 205 125 a 20 20 0 0 1 40 0 a 20 20 0 0 1 -40 0" loc="[2, 3]" roads="[[1, 2], [2, 2], [3, 2], [3, 3]]"/>
+							<path class="harehounds pet dog" d="m 235 130 l 0 -5 a 10 10 0 0 0 -20 0 l 0 5"/>
+						</g>
+						<g>
+							<path class="harehounds case" d="m 55 200 a 20 20 0 0 1 40 0 a 20 20 0 0 1 -40 0" loc="[3, 1]" roads="[[2, 1], [3, 2], [4, 1]]"/>
+						</g>
+						<g>
+							<path class="harehounds case" d="m 130 200 a 20 20 0 0 1 40 0 a 20 20 0 0 1 -40 0" loc="[3, 2]" roads="[[2, 1], [2, 2], [2, 3], [3, 1], [3, 2], [3, 3], [4, 1], [4, 2], [4, 3]]"/>
+						</g>
+						<g>
+							<path class="harehounds case" d="m 205 200 a 20 20 0 0 1 40 0 a 20 20 0 0 1 -40 0" loc="[3, 3]" roads="[[2, 3], [3, 2], [4, 3]]"/>
+						</g>
+						<g>
+							<path class="harehounds case" d="m 55 275 a 20 20 0 0 1 40 0 a 20 20 0 0 1 -40 0" loc="[4, 1]" roads="[[3, 1], [3, 2], [4, 2], [5, 2]]"/>
+						</g>
+						<g>
+							<path class="harehounds case" d="m 130 275 a 20 20 0 0 1 40 0 a 20 20 0 0 1 -40 0" loc="[4, 2]" roads="[[3, 2], [4, 1], [4, 3], [5, 2]]"/>
+						</g>
+						<g>
+							<path class="harehounds case" d="m 205 275 a 20 20 0 0 1 40 0 a 20 20 0 0 1 -40 0" loc="[4, 3]" roads="[[3, 2], [3, 3], [4, 2], [5, 2]]"/>
+						</g>
+						<g>
+							<path class="harehounds case" d="m 130 350 a 20 20 0 0 1 40 0 a 20 20 0 0 1 -40 0" loc="[5, 2]" roads="[[4, 1], [4, 2], [4, 3]]"/>
+							<path class="harehounds pet rabbit" d="m 160 345 l -20 0 l 0 10"/> <!-- (rotated): m 145 340 l 0 20 l 10 0 -->
+						</g>
+					</g>
+				</g>
+				<text class="harehounds victory" x="150" y="430"></text>
+			</svg>
+		</div>
+		<script src="js/harehounds.min.js"></script>
+
+		<link rel="stylesheet" href="css/cadavre.min.css"/>
+		<div class="main cadavre" style="display: none">
+
+		</div>
+		<script src="js/cadavre.min.js"></script>
+	</body>
+</html>
